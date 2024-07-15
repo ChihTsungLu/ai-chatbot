@@ -33,8 +33,10 @@ The OpenAI API Key is stored in the .env file. Ensure you have your API key set 
     
 Replace YOUR_OPENAI_API_KEY with your actual OpenAI API key.
 
-Technologies Used
-Next.js: React framework for server-side rendering and static site generation.
-Tailwind CSS: Utility-first CSS framework.
-LangChain: Integration for advanced natural language processing.
-Vercel SDK: Deployment and serverless functions.
+### Technologies Used
+
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **Tailwind CSS**: Utility-first CSS framework.
+- **LangChain**: Integration for advanced natural language processing.
+- **Vercel SDK**: Deployment and serverless functions.
+
