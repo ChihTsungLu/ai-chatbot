@@ -36,8 +36,6 @@ export default function Chat() {
     setMessages([])
     setChatHistory([])
     localStorage.setItem('chatHistory', JSON.stringify([]))
-    console.log('123')
-    console.log('dd: ', messages)
   }
 
   useEffect(() => {
@@ -57,8 +55,6 @@ export default function Chat() {
       setChatHistory(JSON.parse(storedChatHistory));
     }
   }, [])
-
-  console.log('12', messages)
 
   return (
     <div className="flex flex-col w-full max-w-2xl mx-auto stretch p-4 p-sm-0 pb-20">
