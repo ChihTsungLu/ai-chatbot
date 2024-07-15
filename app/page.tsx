@@ -5,7 +5,7 @@ import { useChat } from 'ai/react';
 export default function Chat() {
 
   const [userIsTyping, setUserIsTyping] = useState(false)
-  const [chatHistory, setChatHistory] = useState()
+  const [chatHistory, setChatHistory] = useState([])
 
   const { messages, setMessages, input, handleInputChange, handleSubmit, isLoading } = useChat({
     api: "api/chat",
@@ -34,7 +34,10 @@ export default function Chat() {
 
   const handleClearHistory = () => {
     setMessages([])
+    setChatHistory([])
     localStorage.setItem('chatHistory', JSON.stringify([]))
+    console.log('123')
+    console.log('dd: ',messages)
   }
 
   useEffect(() => {
@@ -55,6 +58,7 @@ export default function Chat() {
     }
   }, [])
 
+  console.log('12',messages)
 
   return (
     <div className="flex flex-col w-full max-w-2xl mx-auto stretch p-4 p-sm-0">
