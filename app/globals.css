@@ -85,3 +85,7 @@
     text-wrap: balance;
   }
 }
+
+.green_gradient {
+  @apply bg-gradient-to-r from-green-500 via-green-600 to-green-500 bg-clip-text text-transparent;
+}
