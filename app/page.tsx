@@ -37,7 +37,7 @@ export default function Chat() {
     setChatHistory([])
     localStorage.setItem('chatHistory', JSON.stringify([]))
     console.log('123')
-    console.log('dd: ',messages)
+    console.log('dd: ', messages)
   }
 
   useEffect(() => {
@@ -58,10 +58,10 @@ export default function Chat() {
     }
   }, [])
 
-  console.log('12',messages)
+  console.log('12', messages)
 
   return (
-    <div className="flex flex-col w-full max-w-2xl mx-auto stretch p-4 p-sm-0">
+    <div className="flex flex-col w-full max-w-2xl mx-auto stretch p-4 p-sm-0 pb-20">
       {
         messages.length === 0
           ?
@@ -123,15 +123,17 @@ export default function Chat() {
 
       {
         messages.length > 0 &&
-        <button
-          className='my-20 w-fit fixed bottom-2'
-          onClick={handleClearHistory}
-          aria-label="Restart New Conversation"
-        >
-          <p className='border rounded-lg w-fit p-2 text-sm bg-emerald-600	 border-slate-300 text-white'>
-            Restart New Conversation
-          </p>
-        </button>
+        <div className="flex justify-end items-center">
+          <button
+            className='my-20 w-fit fixed bottom-2'
+            onClick={handleClearHistory}
+            aria-label="Restart New Conversation"
+          >
+            <p className='border rounded-3xl w-fit p-2 bg-emerald-600	 border-slate-300 text-white'>
+              Restart
+            </p>
+          </button>
+        </div>
       }
 
       <form onSubmit={handleSubmit}>
