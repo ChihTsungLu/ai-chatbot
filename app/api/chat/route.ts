@@ -4,7 +4,6 @@ import { ChatOpenAI } from '@langchain/openai';
 import { HttpResponseOutputParser } from 'langchain/output_parsers';
 import { PromptTemplate } from '@langchain/core/prompts'
 // Allow streaming responses up to 30 seconds
-export const maxDuration = 30;
 
 const formatMessage = (message: VercelChatMessgae) => {
     return `${message.role}: ${message.content}`;
