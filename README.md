@@ -17,19 +17,20 @@ Make sure you have Node.js and npm installed on your machine.
    ```
 2. Install dependencies
    ```
-     npm install
+   npm install
    ```
 ### Running the Development Server
    ```
-     npm run dev
+   npm run dev
    ```
 
 ### OpenAI API Key
 The OpenAI API Key is stored in the .env file. Ensure you have your API key set up as follows:
-    ```
-    #.env
-    OPENAI_API_KEY=YOUR_OPENAI_API_KEY
-    ```
+   ```
+       #.env
+       OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+   ```
+    
 Replace YOUR_OPENAI_API_KEY with your actual OpenAI API key.
 
 Technologies Used
