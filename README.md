@@ -37,7 +37,7 @@ Replace YOUR_OPENAI_API_KEY with your actual OpenAI API key.
 The Bright Data API Key is stored in the .env file. Ensure you have your API key set up as follows:
    ```
        #.env
-       OBRIGHT_DATA_KEY=YOUR_BRIGHT_DATA_KEY
+       BRIGHT_DATA_KEY=YOUR_BRIGHT_DATA_KEY
    ```
     
 Replace YOUR_OPENAI_API_KEY with your actual OpenAI API key.
