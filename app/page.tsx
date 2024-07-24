@@ -4,6 +4,7 @@ import { useChat } from 'ai/react';
 import { getAZBestSeller } from './util/getAZ';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from "lucide-react"
+import { marked } from 'marked';
 // import BestSeller from '@/components/BestSeller/BestSeller';
 interface BestSellerProps {
   name: string
@@ -78,9 +79,9 @@ export default function Chat() {
       handleSubmit();
     } catch (error: any) {
       console.error(error.message);
-      setError("An error occurred while fetching Amazon Best Seller data. Please try again later."); 
+      setError("An error occurred while fetching Amazon Best Seller data. Please try again later.");
     } finally {
-      setIsFetchingBestSeller(false); 
+      setIsFetchingBestSeller(false);
     }
   }
 
@@ -123,7 +124,7 @@ export default function Chat() {
 
                     {m.content.includes(JSON.stringify(bestSellerData)) ?
                       <div>
-                        Analyzing Amazon Best Seller Data
+                        Analyzing Amazon Bestseller Data
                         {
                           bestSellerData.map((item, index) =>
                           (
@@ -146,7 +147,8 @@ export default function Chat() {
                   <div>
                     <p className="bg-white z-10 text-black p-3 rounded-lg border border-black">
 
-                      {m.content}
+                    <div dangerouslySetInnerHTML={{ __html: marked(m.content) }} />
+                      {/* {marked(m.content)} */}
                     </p>
                     <p className="mt-1 text-sm">
                       {m.createdAt ? new Date(m.createdAt).toLocaleString() : ""}
