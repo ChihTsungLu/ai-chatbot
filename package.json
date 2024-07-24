@@ -11,11 +11,21 @@
   "dependencies": {
     "@ai-sdk/openai": "^0.0.36",
     "@langchain/openai": "^0.2.1",
+    "@radix-ui/react-slot": "^1.1.0",
     "ai": "^3.2.22",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "dompurify": "^3.1.6",
     "langchain": "^0.2.9",
+    "lucide-react": "^0.414.0",
+    "marked": "^13.0.2",
     "next": "14.2.5",
+    "puppeteer-core": "^22.13.1",
     "react": "^18",
     "react-dom": "^18",
+    "recharts": "^2.12.7",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"
   },
   "devDependencies": {

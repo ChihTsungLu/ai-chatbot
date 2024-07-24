@@ -29,9 +29,10 @@ export async function POST(req: Request) {
     const prompt = PromptTemplate.fromTemplate(TEMPLATE);
 
     const model = new ChatOpenAI({
-        model: "gpt-3.5-turbo",
+        model: "gpt-4o",
         apiKey: process.env.OPENAI_API_KEY,
         verbose: true,
+        
     })
 
     const parser = new HttpResponseOutputParser();
